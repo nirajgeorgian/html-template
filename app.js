@@ -1,4 +1,6 @@
-require('dotenv-safe').config();
+require('dotenv-safe').config({
+  allowEmptyValues:true
+});
 
 const nodemailer = require('nodemailer');
 const Email = require('email-templates');

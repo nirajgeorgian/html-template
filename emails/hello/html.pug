@@ -1,6 +1,8 @@
 doctype transitional
 html(xmlns='http://www.w3.org/1999/xhtml')
   head
+    link(rel="preconnect" href="https://fonts.gstatic.com")
+    link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet")
     meta(name='viewport', content='width=device-width')
     meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
     title Hello World
@@ -26,6 +28,11 @@ html(xmlns='http://www.w3.org/1999/xhtml')
       /* Let's make sure all tables have defaults */
       table td {
       vertical-align: top;
+      }
+
+      td strong{
+        font-family: 'Roboto', sans-serif;
+        font-size:14px;
       }
       /* -------------------------------------
       BODY & CONTAINER
@@ -61,6 +68,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
       }
       .content-wrap {
       padding: 20px;
+
       }
       .plain {
         margin: 0;
@@ -80,7 +88,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
         margin:0px 0px 0px 0px;
       }
       .content-block {
-      padding: 0 0 20px;
+      padding: 0;
       }
       .header {
       width: 100%;
@@ -127,12 +135,20 @@ html(xmlns='http://www.w3.org/1999/xhtml')
       font-weight: 600;
       }
       p, ul, ol {
-      margin-bottom: 10px;
       font-weight: normal;
+      //- font-family: 'Roboto', sans-serif;
       }
       p li, ul li, ol li {
       margin-left: 5px;
       list-style-position: inside;
+      }
+      button{
+        padding:3px 6px 3px 6px;
+        background-color:#1a508b;
+        border-radius:3px;
+        border:none;
+        font-size:12px;
+
       }
       /* -------------------------------------
       LINKS & BUTTONS
@@ -256,7 +272,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
       padding: 0 !important;
       }
       .content-wrap {
-      padding: 10px !important;
+      padding:0 10px 10px 10px !important;
       }
       .invoice {
       width: 100% !important;
@@ -275,38 +291,54 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                   tr
                     td.content-wrap.full-width
                       table(width='100%', cellpadding='0', cellspacing='0')
+                        tbody(style="background: #d9a7c7;background: linear-gradient(to right, #d9a7c7, #fffcdc);border:none;")
+                          tr
+                            td.title(style="padding:15px")
+                              strong(style="font-family: 'Roboto', sans-serif;font-size:16px;") Payment Towards Subscription
+                              strong(style="font-family: 'Roboto',font-weight:600 , sans-serif;font-size:18px;padding:0 0 0 30%") INR.23,500.00
+                          tr
+                            td.semi-title(style="padding-left:20px ; display:inline-flex")
+                              p(style="font-family: 'Roboto', sans-serif;font-size:10px;color:#ff577f").
+                                Due On:20/06/2020
+                              button(style="position:relative;margin:0 0 0 38vw;color:white;") Review & Pay
+                          tr
+                            td.semi-title(style="padding-left:20px;padding-bottom:20px;")
+                              p(style="font-family: 'Roboto', sans-serif;font-size:10px;").
+                                Issued On:20/05/2020
+                  tr
+                    td.content-wrap.full-width(style="padding-top:0;")
+                      table(width='100%', cellpadding='0', cellspacing='0')
                         tbody
                           tr
                             td.title
-                              strong.
-                                Dear Mr.John Doe,
+                              strong(style="font-family: 'Roboto', sans-serif;font-size:14px;") Dear Mr.Shivam singh,
                           tr
                             td.semi-title
-                              p.
+                              p(style="font-family: 'Roboto', sans-serif;font-size:12px;color:#a6a9b6;").
                                 Here's your invoice! We Appreciate Your Prompt Payment.
                           tr
                             td.semi-title
-                              p.
+                              p(style="font-family: 'Roboto', sans-serif;font-size:12px;color:#a6a9b6;").
                                 Thanks for your Business!
                           tr
                             td.semi-title
-                              p.
+                              p(style="font-family: 'Roboto', sans-serif;font-size:12px;color:#a6a9b6;").
                                 North Loop Banking
                   tr
-                    td.content-wrap.full-width
+                    td.content-wrap.full-width(style="padding-top:0;")
                       meta(itemprop='name', content='')
                       table(width='100%', cellpadding='0', cellspacing='0')
                         tbody
                           tr
                             td.content-block
-                              strong.
+                              strong(style="font-family: 'Roboto', sans-serif;font-size:14px;").
                                 Hello, #{fname} #{lname}
                           tr
                             td.content-block
-                              p.
-                                This is an example HTML message. Thanks for reading!
+                              p(style="font-family: 'Roboto', sans-serif;font-size:12px;color:#a6a9b6;").
+                                This is an example HTML message. Thanks for reading!                  
                   tr
-                    td(align="center",valign="top").content-wrap
+                    td(align="center",valign="top",style=" border-style: groove; border-bottom:none; border-right:none; border-left:none;").content-wrap
                       table(align="left", border="0", cellpadding="0", cellspacing="0", width="250", class="templateColumnContainer")
                         tr
                           td.leftColumnContent.title
@@ -314,93 +346,123 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                               Bill To:
                         tr
                           td(valign="top").leftColumnContent
-                            p.plain
-                              Effie Ball
+                            p(style="font-family: 'Roboto', sans-serif;font-size:10px;color:#a6a9b6;") Effie Ball
                         tr
                           td(valign="top").leftColumnContent
-                            p.plain
-                              INA Technology
+                           p(style="font-family: 'Roboto', sans-serif;font-size:10px;color:#a6a9b6;") INA Technology
                         tr
                           td(valign="top").leftColumnContent
-                            p.plain
-                            Address Line 1
+                           p(style="font-family: 'Roboto', sans-serif;font-size:10px;color:#a6a9b6;") Address Line 1
                         tr
                           td(valign="top").leftColumnContent
-                            p.plain
-                              Effie Ball
+                            p(style="font-family: 'Roboto', sans-serif;font-size:10px;color:#a6a9b6;") Effie Ball
                         tr
                           td(valign="top").leftColumnContent
-                            p.plain
-                              INA Technology
+                            p(style="font-family: 'Roboto', sans-serif;font-size:10px;color:#a6a9b6;") INA Technology
                         tr
                           td(valign="top").leftColumnContent
-                            p.plain
-                              Address Line 1
+                            p(style="font-family: 'Roboto', sans-serif;font-size:10px;color:#a6a9b6;") Address Line 1
                       table(align="right", border="0", cellpadding="0", cellspacing="0", width="250", class="templateColumnContainer")
                         tr
                           td(align="right").rightColumnContent.title
                             strong.
-                              Bill To:
+                             Ship To:
                         tr
                           td(valign="top", align="right").rightColumnContent
-                            p.plain
-                              Effie Ball
+                            p(style="font-family: 'Roboto', sans-serif;font-size:12px;color:#a6a9b6;") Effie Ball
                         tr
                           td(valign="top", align="right").rightColumnContent
-                            p.plain
-                              INA Technology
+                            p(style="font-family: 'Roboto', sans-serif;font-size:12px;color:#a6a9b6;") INA Technology
                         tr
                           td(valign="top", align="right").rightColumnContent
-                            p.plain
-                              Address Line 1
+                            p(style="font-family: 'Roboto', sans-serif;font-size:12px;color:#a6a9b6;") Address Line 1
                         tr
                           td(valign="top", align="right").rightColumnContent
-                            p.plain
-                              Effie Ball
+                            p(style="font-family: 'Roboto', sans-serif;font-size:12px;color:#a6a9b6;") Effie Ball
                         tr
                           td(valign="top", align="right").rightColumnContent
-                            p.plain
-                              INA Technology
+                            p(style="font-family: 'Roboto', sans-serif;font-size:12px;color:#a6a9b6;") INA Technology
                         tr
                           td(valign="top", align="right").rightColumnContent
-                            p.plain
-                              'Address Line 1'
+                            p(style="font-family: 'Roboto', sans-serif;font-size:12px;color:#a6a9b6;") Address Line 1
                   tr
                     td(align="center",valign="top").content-wrap
                       table(align="left", border="0", cellpadding="0", cellspacing="0", width="250", class="templateColumnContainer")
                         tr
                           td.leftColumnContent.title
-                            strong.
+                            p(style="font-family: 'Roboto', sans-serif;font-size:14px;").
                               Sub Total:
                         tr
                           td(valign="top").leftColumnContent
-                            p.plain
-                            Igst @18% on 18,500
+                            p(style="font-family: 'Roboto', sans-serif;font-size:12px;") Igst @18% on 18,500
                         tr
                           td(valign="top").leftColumnContent
-                            p.plain
-                            Total
+                            p(style="font-family: 'Roboto', sans-serif;font-size:12px;") Total
                         tr
                           td(valign="top").leftColumnContent
-                            p.plain
-                            Balance Due
+                            p(style="font-family: 'Roboto', sans-serif;font-size:12px;") Due
                       table(align="right", border="0", cellpadding="0", cellspacing="0", width="250", class="templateColumnContainer")
                         tr
                           td(align="right").rightColumnContent.title
-                            strong.
+                            strong(style="font-family: 'Roboto',sans-serif;font-size:14px;").
                               INR 18,500.000
                         tr
                           td(valign="top", align="right").rightColumnContent
-                            strong.
+                            strong(style="font-family: 'Roboto',sans-serif;font-size:14px;").
                               INR 7,500.00
                         tr
                           td(valign="top", align="right").rightColumnContent
-                            strong.
+                            strong(style="font-family: 'Roboto',sans-serif;font-size:14px;").
                               INR 2,500.00
                         tr
                           td(valign="top", align="right").rightColumnContent
-                            strong.
+                            strong(style="font-family: 'Roboto',sans-serif;font-size:14px;").
                               INR 23,500.00
+                  tr
+                    td(align="center",valign="top",style=" border-style: groove; border-bottom:none; border-right:none; border-left:none;").content-wrap
+                      table(align="left", border="0", cellpadding="0", cellspacing="0", width="250", class="templateColumnContainer")
+                        tr
+                          td.leftColumnContent.title
+                            strong(style="font-size:14px,font-weight:500").
+                             Payment Towards Subscription
+                        tr
+                          td(valign="top").leftColumnContent
+                            p(style="font-family: 'Roboto', sans-serif;font-size:12px;") Web Development (Monthly Dedicated)
+                        tr
+                          td(valign="top").leftColumnContent
+                           p(style="font-family: 'Roboto', sans-serif;font-size:10px;") 1x INR.18,5000     18%GST
+                      table(align="right", border="0", cellpadding="0", cellspacing="0", width="250", class="templateColumnContainer")
+                        tr
+                          td(align="right").rightColumnContent.title
+                            strong(style="font-size:18px,font-weight:600").
+                             INR. 23,500.00
+                  tr
+                    td(align="center",valign="top",style=" border-style: groove; border-bottom:none; border-right:none; border-left:none;").content-wrap
+                      table(align="left", border="0", cellpadding="0", cellspacing="0", width="250", class="templateColumnContainer")
+                        tr
+                          td.leftColumnContent.title
+                            strong(style="font-size:15px").
+                             Transfer Details
+                        tr
+                          td(valign="top",style="display:inline-flex").leftColumnContent
+                            p(style="font-family: 'Roboto', sans-serif;font-size:12px;color:#a6a9b6;") Company Name:
+                            p(style="font-family: 'Roboto', sans-serif;font-size:12px;") Innotech PVT LTD
+                        tr
+                          td(valign="top",style="display:inline-flex").leftColumnContent
+                            p(style="font-family: 'Roboto', sans-serif;font-size:12px;color:#a6a9b6;") Bank Name:
+                            p(style="font-family: 'Roboto', sans-serif;font-size:12px;") ICICI BANK
+                        tr
+                          td(valign="top",style="display:inline-flex").leftColumnContent
+                            p(style="font-family: 'Roboto', sans-serif;font-size:12px;color:#a6a9b6;") Account Number:
+                            p(style="font-family: 'Roboto', sans-serif;font-size:12px;") 2020465894
+                        tr
+                          td(valign="top",style="display:inline-flex").leftColumnContent
+                            p(style="font-family: 'Roboto', sans-serif;font-size:12px;color:#a6a9b6;") IFSC Code:
+                            p(style="font-family: 'Roboto', sans-serif;font-size:12px;") ICIC0000872
+                        tr
+                          td(valign="top",style="display:inline-flex").leftColumnContent
+                            p(style="font-family: 'Roboto', sans-serif;font-size:12px;color:#a6a9b6;") Swift Code:
+                            p(style="font-family: 'Roboto', sans-serif;font-size:12px;") WRP12345677
                   //- tr
                   //-   td.content-wrap
                   //-     meta(itemprop='name', content='')
